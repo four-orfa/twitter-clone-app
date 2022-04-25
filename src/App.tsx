@@ -3,8 +3,8 @@ import styles from './App.module.css'
 import { useSelector, useDispatch } from 'react-redux'
 import { selectUser, login, logout } from './features/userSlice'
 import { auth } from './firebase'
-import Feed from './components/feed'
-import Auth from './components/auth'
+import Feed from './components/Auth'
+import Auth from './components/Feed'
 
 const App: React.FC = () => {
   const user = useSelector(selectUser)
@@ -24,19 +24,20 @@ const App: React.FC = () => {
         dispatch(logout())
       }
     })
+
     return () => {
       unSub()
     }
   }, [dispatch])
-
+  console.log(user)
   return (
     <>
       {user.uid ? (
+        <Auth />
+      ) : (
         <div className={styles.app}>
           <Feed />
         </div>
-      ) : (
-        <Auth />
       )}
     </>
   )
