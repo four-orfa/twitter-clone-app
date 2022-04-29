@@ -4,6 +4,7 @@
 }
 .login_modal {
   text-align: center;
+  display: flex;
 }
 .login_reset {
   cursor: pointer;
