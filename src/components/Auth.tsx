@@ -1,4 +1,4 @@
-import React, { ReactEventHandler, useState } from 'react'
+import React, { useState } from 'react'
 import styles from './Auth.module.css'
 import { useDispatch } from 'react-redux'
 import { updateUserProfile } from '../features/userSlice'
@@ -264,8 +264,14 @@ const Auth: React.FC = () => {
                 </span>
               </Grid>
             </Grid>
-
-            <Button fullWidth variant='contained' color='primary' className={classes.submit} onClick={signInGoogle}>
+            <Button
+              fullWidth
+              variant='contained'
+              color='primary'
+              startIcon={<CameraIcon />}
+              className={classes.submit}
+              onClick={signInGoogle}
+            >
               Sign In With Google
             </Button>
             <Box mt={5}>
