@@ -1,4 +1,4 @@
-import { FC, ReactEventHandler, useState } from 'react'
+import { useState } from 'react'
 import styles from './TweetInput.module.css'
 import { useSelector } from 'react-redux'
 import { selectUser } from '../features/userSlice'
@@ -7,7 +7,7 @@ import { Avatar, Button, IconButton } from '@material-ui/core'
 import firebase from 'firebase/app'
 import AddAPhoto from '@material-ui/icons/AddAPhoto'
 
-const TweetInput: FC = () => {
+const TweetInput: React.FC = () => {
   const user = useSelector(selectUser)
 
   const [tweetImage, setTweetImage] = useState<File | null>(null)
