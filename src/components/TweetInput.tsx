@@ -43,7 +43,7 @@ const TweetInput: React.FC = () => {
             .then(async (url) => {
               await db.collection('posts').add({
                 avatar: user.photoURL,
-                Image: url,
+                image: url,
                 text: tweetMessage,
                 timestamp: firebase.firestore.FieldValue.serverTimestamp(),
                 displayName: user.displayName,
