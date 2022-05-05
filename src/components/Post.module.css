@@ -43,24 +43,24 @@
   border-radius: 20px;
   max-height: 250px;
 }
-.post_comment {
+.post_reply {
   display: flex;
   align-items: center;
   word-break: break-all;
   margin: 12px;
 }
-.post_commentIcon {
+.post_replyIcon {
   margin-top: 16px;
   color: whitesmoke;
   cursor: pointer;
 }
-.post_commentUser {
+.post_replyUser {
   font-weight: 600;
   font-size: 16px;
   color: white;
   margin-right: 12px;
 }
-.post_commentText {
+.post_replyText {
   font-size: 16px;
   color: whitesmoke;
   margin-right: 10px;

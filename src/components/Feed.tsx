@@ -10,11 +10,11 @@ const Feed: React.FC = () => {
   const [posts, setPosts] = useState([
     {
       id: '',
+      displayName: '',
       avatar: '',
       image: '',
       text: '',
-      timestamp: '',
-      displayName: '',
+      timestamp: null,
     },
   ])
 
@@ -42,17 +42,21 @@ const Feed: React.FC = () => {
   return (
     <div className={styles.feed}>
       <TweetInput />
-      {posts.map((post) => (
-        <Post
-          key={post.id}
-          id={post.id}
-          avatar={post.avatar}
-          image={post.image}
-          text={post.text}
-          timestamp={post.timestamp}
-          displayName={post.displayName}
-        />
-      ))}
+      {posts[0]?.id && (
+        <>
+          {posts.map((post) => (
+            <Post
+              key={post.id}
+              id={post.id}
+              avatar={post.avatar}
+              image={post.image}
+              text={post.text}
+              timestamp={post.timestamp}
+              displayName={post.displayName}
+            />
+          ))}
+        </>
+      )}
     </div>
   )
 }
